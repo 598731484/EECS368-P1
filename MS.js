@@ -16,7 +16,7 @@
         
 
 
-
+        //Initialization matrix
         function init_grid()
         {
             let gridHtml='';
@@ -47,7 +47,7 @@
         }
     
         
-
+        //Grid click event
         function block_click(_i, _j, e)
         {
             
@@ -69,7 +69,7 @@
                     isFirstOpen=false;
                     let count = 0;
                     
-                    
+                    //Generate mines
                     while (count < maxCount)
                     {
                         
@@ -94,12 +94,12 @@
                 }
                 block_open(_i,_j);
                 
-                
+                //open grid function
                 function block_open(_i,_j)
                 {
                     let block = grid[_i][_j];
                     op(block);
-                    
+                    //set the state and style of the open grid
                     function op(block)
                     {
                         block.isOpen = true;
@@ -145,7 +145,7 @@
                     }
                 }
             }
-            else if(e.button ===2)
+            else if(e.button ===2) //right mouse button to mark the square
             {
                 let block=grid[_i][_j];
                 if(block.innerHTML !=='*')
@@ -159,6 +159,7 @@
             }
             let isWin=true;
             count.innerHTML=maxCount;
+            
             for(let i=0; i<row; i++)
             {
                 for(let j=0; j<col; j++)
