@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+       
+        <link rel="stylesheet" href="./MS.css">
+        <title>MINESWEEPER</title>
+
+
+        <body ondragstart='return false' oncontextmenu='self.event.returnValue=false'> <!--Anti-dragging to generate new page & shield right-click menu-->
+            <button id ="resetButton" style="float:left" onclick="location.reload()">Reset</button>
+            <div id='bar'>
+                <span class='bar'>Mines left: <label id='count'>0</label></span>
+                <span class='bar'>Time: <label id='time'>0</label>s</span>
+            </div>
+            <table id='grid'></table>
+            <script src="./MS.js"></script>
+        </head>
+    </body>
+</html>
